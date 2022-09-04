@@ -1,0 +1,18 @@
+<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/> 
+<title>Disability Assistant</title>
+<center>
+    <h1>Disability Assistant</h1>
+</center>
+
+{% if filename %}
+    {{tts()}}
+{% endif %}
+
+<form method="post" action="/" enctype="multipart/form-data">
+    <p>
+        <input type="file" name="file" autocomplete="off" required>
+    </p>
+    <p>
+        <input type="submit" value="Submit">
+    </p>
+</form>
